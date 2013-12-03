@@ -1,0 +1,6 @@
+#!/bin/sh
+yacc -d interpreter.y
+lex interpreter.l
+cc lex.yy.c y.tab.c -o interpreter.exe
+echo "Done compiling lexical analyzer and grammar rules."
+
