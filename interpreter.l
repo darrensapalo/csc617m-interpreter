@@ -11,7 +11,7 @@ letter	[A-Za-z]
 	return INTEGER;
 }
 
-[-+\n]	return *yytext;
+[-+*/\n]	return *yytext;
 
 [ \t]	; /* skip whitespace */
 .		ECHO;
