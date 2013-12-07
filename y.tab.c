@@ -65,9 +65,9 @@
 /* Line 371 of yacc.c  */
 #line 1 "interpreter.y"
 
-#include <stdio.h>
-  int yylex(void);
-void yyerror(char *);
+	#include <stdio.h>
+	int yylex(void);
+	void yyerror(char *);
 
 /* Line 371 of yacc.c  */
 #line 74 "y.tab.c"
@@ -438,7 +438,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    12,    12,    13,    17,    18,    19
+       0,    11,    11,    12,    16,    17,    18
 };
 #endif
 
@@ -1320,25 +1320,25 @@ yyreduce:
     {
         case 2:
 /* Line 1787 of yacc.c  */
-#line 12 "interpreter.y"
+#line 11 "interpreter.y"
     { printf("%d\n", (yyvsp[(2) - (3)])); }
     break;
 
   case 4:
 /* Line 1787 of yacc.c  */
-#line 17 "interpreter.y"
+#line 16 "interpreter.y"
     { (yyval) = (yyvsp[(1) - (1)]); }
     break;
 
   case 5:
 /* Line 1787 of yacc.c  */
-#line 18 "interpreter.y"
+#line 17 "interpreter.y"
     { (yyval) = (yyvsp[(1) - (3)]) + (yyvsp[(3) - (3)]); }
     break;
 
   case 6:
 /* Line 1787 of yacc.c  */
-#line 19 "interpreter.y"
+#line 18 "interpreter.y"
     { (yyval) = (yyvsp[(1) - (3)]) - (yyvsp[(3) - (3)]); }
     break;
 
@@ -1576,10 +1576,14 @@ yyreturn:
 
 
 /* Line 2050 of yacc.c  */
-#line 22 "interpreter.y"
+#line 21 "interpreter.y"
 
 
 void yyerror(char *s)
 {
     fprintf(stderr, "%s\n", s);
+}
+int main(void){
+  yyparse();
+  return 0;
 }
