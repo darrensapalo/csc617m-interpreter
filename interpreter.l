@@ -14,7 +14,7 @@ letter	[A-Za-z]
 [-+*/\n]	return *yytext;
 
 [ \t]	; /* skip whitespace */
-.		ECHO;
+[()]	;
 %%
 
 int yywrap(void){

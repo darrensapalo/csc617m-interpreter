@@ -379,7 +379,7 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[11] =
     {   0,
-        0,    0,    6,    4,    3,    2,    2,    1,    1,    0
+        0,    0,    6,    5,    3,    2,    4,    1,    1,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -387,8 +387,8 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    4,    4,    1,    4,    1,    4,    5,    5,    5,
+        1,    2,    1,    1,    1,    1,    1,    1,    1,    4,
+        4,    3,    3,    1,    3,    1,    3,    5,    5,    5,
         5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -756,7 +756,7 @@ YY_RULE_SETUP
 case 4:
 YY_RULE_SETUP
 #line 17 "interpreter.l"
-ECHO;
+;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
