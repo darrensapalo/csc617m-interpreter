@@ -6,15 +6,19 @@ void yyerror(char *);
 digit	[0-9]
 letter	[A-Za-z]
 %%
-[0-9]+	{
-	yylval = atoi(yytext);
-	return INTEGER;
-}
+{letter}	{
+		yylval = *yytext - 'a';
+		return VARIABLE;
+		}
+{digit}+	{
+		yylval = atoi(yytext);
+		return INTEGER;
+		}
 
-[-+*/\n]	return *yytext;
+[-+()=*/\n]	return *yytext;
 
-[ \t]	; /* skip whitespace */
-[()]	;
+[ \t]		; /* skip whitespace */
+.		yyerror("Invalid character");
 %%
 
 int yywrap(void){

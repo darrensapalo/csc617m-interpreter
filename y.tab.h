@@ -46,11 +46,13 @@ extern int yydebug;
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     INTEGER = 258
+     INTEGER = 258,
+     VARIABLE = 259
    };
 #endif
 /* Tokens.  */
 #define INTEGER 258
+#define VARIABLE 259
 
 
 
